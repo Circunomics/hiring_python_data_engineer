@@ -12,6 +12,15 @@ This technical challenge is designed for the Data Engineer role, with an emphasi
 
 ## Requirements
 
+1. **Folder Structure**:
+   - The data should be segregated and stored in the following folder structure:
+   - {phase}_{module}/year/month/day/hour.parquet.
+   - This parquet file shall only contain the data of the respective hour. (Eg: 15.parquet goes from 15:00 to 16:00, following the 24 hour format)
+
+2. **Data structure**:
+   - The data shall be structured in columns.<br>
+For example, if the phase module has module_voltage, we shall have the module_voltage column in the output hour file.
+   - Phase X Module Y shall only contain the respective data belonging to this module and phase. 
 1. **Jupyter Notebook**:
    - The notebook should contain the entire workflow, from data ingestion to plotting.
    - It should demonstrate the ETL process and provide visualizations based on the various columns in the data.
@@ -35,7 +44,7 @@ This technical challenge is designed for the Data Engineer role, with an emphasi
    - Ensure the files conform to a **5-second sampling rate**.
 
 3. **Graphs**:
-   - Plot data in relation to time, using columns present in the data files.
+   - Plot data in relation to time, using columns present in the generated data files.
    - All visualizations should be well-labeled and clear.
 
 4. **Containerized Solution**:
@@ -57,16 +66,16 @@ This technical challenge is designed for the Data Engineer role, with an emphasi
 We expect to be able to execute your technical challenge using:
 
 1. **Jupyter Notebook**:
-   - Open the provided notebook and follow the workflow to understand the ETL process and visualizations.
+   - Open the provided notebook and execute the code to see the ETL process and plotting process.
 
 2. **Python CLI Script**:
-   - Run the ETL script from the command line:
+   - We shall be able to execute the ETL script from the command line like so:
      ```bash
-     python etl_process.py --input data/ --output output/
+     python solution.py --input data/ --output output/
      ```
 
 3. **Docker Container**:
-   - Build and run the Docker container:
+   - We shall be able to build and run the Docker container:
      ```bash
      docker build -t data-engineer-challenge .
      docker run -v $(pwd)/data:/app/data -v $(pwd)/output:/app/output data-engineer-challenge
@@ -77,5 +86,7 @@ We expect to be able to execute your technical challenge using:
 
 - Ensure that the processed parquet files maintain the required 5-second sampling rate.
 - All processing steps, from data cleaning to file generation, should be optimized for performance.
+- After concluding this technical challenge, please provide access to jobs@circunomics.com
+- This repo shall be kept private. Not keeping your technical challenge private will equal to disqualification.
 
 
