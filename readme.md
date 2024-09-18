@@ -87,6 +87,6 @@ We expect to be able to execute your technical challenge using:
 - Ensure that the processed parquet files maintain the required 5-second sampling rate.
 - All processing steps, from data cleaning to file generation, should be optimized for performance.
 - After concluding this technical challenge, please provide access to jobs@circunomics.com
-- This repo shall be kept private. Not keeping your technical challenge private will equal to disqualification.
+- Your technical challenge github repository shall be kept private. Not keeping your technical challenge private will equal to disqualification.
 
 
